@@ -1,5 +1,5 @@
 {% set name = "pyglpk" %}
-{% set version = "0.4.6" %}
+{% set version = "0.4.7" %}
 {% set source = "glpk" %}
 
 package:
@@ -8,11 +8,11 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ source[0] }}/{{ source }}/{{ source }}-{{ version }}.tar.gz
-  sha256: 8739fcf6513c2f225ac525c2a43c89f10de27b546983e7900235ea87c85a1b74
+  sha256: 89a658914b13ae4557b15de945943628c9fc165d46697881027dc39a3dbe9ec3
 
 build:
-  number: 3
-  script: "{{ PYTHON }} -m pip install . -vv"
+  number: 0
+  script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
   build:
@@ -40,11 +40,11 @@ about:
   license: GPL-3.0-only
   license_family: GPL
   license_file: LICENSE
-  summary: 'Bradford Boyles fork of Thoams Finlays pyglpk package. This is compatible with python-3'
+  summary: Bradford Boyles fork of Thoams Finlays pyglpk package. This is compatible with python-3
   description: |
     Thomas Finlay wrote the original pyglpk package, and Bradford Boyle updated it to python 2.7 and then
     python 3. This installation is based on the pypi package and is maintained by @linsalrob
-  doc_url: http://tfinley.net/software/pyglpk/ 
+  doc_url: http://tfinley.net/software/pyglpk/
   dev_url: https://github.com/bradfordboyle/pyglpk
 
 extra:
