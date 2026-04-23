@@ -1,5 +1,5 @@
 {% set name = "pyglpk" %}
-{% set version = "0.4.7" %}
+{% set version = "0.4.8" %}
 {% set source = "glpk" %}
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ source[0] }}/{{ source }}/{{ source }}-{{ version }}.tar.gz
-  sha256: 89a658914b13ae4557b15de945943628c9fc165d46697881027dc39a3dbe9ec3
+  sha256: 419091b0dbbb061c83c64be2e038d1f29182b986627f8f8c4971601e17fbd013
 
 build:
   number: 0
@@ -19,6 +19,7 @@ requirements:
     - python                                 # [build_platform != target_platform]
     - cross-python_{{ target_platform }}     # [build_platform != target_platform]
     - {{ compiler('c') }}
+    - {{ stdlib("c") }}
   host:
     - python
     - pip
